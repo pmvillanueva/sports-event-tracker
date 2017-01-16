@@ -7,16 +7,19 @@
   </head>
 
   <body>
-    <div>
+    <div class="container">
       <h2>SPRT.TRKR</h2>
       <div>
-        <form>
-            <input type="text" placeholder="Sports Event"/>
-            <input type="date" placeholder="test"/>
-            <input type="text" placeholder="test"/>
+        <form class="js-event-form">
+            <input id="sports-event" type="text" placeholder="Sports Event"/>
+            <input id="date" type="text" placeholder="mm/dd/yyyy"/>
+            <input id="location" type="text" placeholder="location"/>
+            <button type="submit">Add Event</button>
         </form>
       </div>
-          <button type="submit">Submit</button>
+      <div class="events">
+        <h1>Events</h1>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
