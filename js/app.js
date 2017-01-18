@@ -6,7 +6,7 @@ $(document).ready(function() {
   var date = $("#date").val();
   var location = $("#location").val();
 
-  $(".events").append(sportsEvent, date, location);
+  $(".events").append(sportsEvent + " ",  date + " ", location);
 
 //$("#event-results").append($("<li>").text(sportsEvent));
 //$("#event-results").append($("<li>").text(date));
