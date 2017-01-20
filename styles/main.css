@@ -18,8 +18,6 @@ h2 {
   color: #F4D03F;
 }
 
-
-
 form {
   display: inline-block;
   border: black;
@@ -38,9 +36,7 @@ input {
   margin-bottom: 25px;
 }
 
-
-
-button {
+#submit-button {
   display: block;
   width: 320px;
   height: 55px;
@@ -54,3 +50,44 @@ button {
   border-radius: 5px;
   border-color: #F4D03F;
   cursor: pointer;
+}
+
+.event-row {
+  float:left;
+  width: 100%;
+}
+
+.event-row div {
+  float:left;
+}
+
+.event-name {
+  width: 10%;
+}
+
+.event-date {
+  width: 10%;
+}
+
+.event-location {
+  width: 10%;
+}
+
+.event-past {
+  color: red;
+  text-decoration: line-through;
+
+}
+
+.delete-button {
+  display: block;
+  width: 80px;
+  height: 22px;
+  text-align: center;
+  color: white;
+  background-color: #F4D03F;
+  font-style: italic;
+  border: 2px solid;
+  border-radius: 5px;
+
+}

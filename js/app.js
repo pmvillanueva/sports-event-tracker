@@ -2,33 +2,30 @@ $(document).ready(function() {
   $(".js-event-form").submit(function(event){
     event.preventDefault();
 
-  var sportsEvent = $("#sports-event").val();
-  var date = $("#date").val();
-  var location = $("#location").val();
+    var sportsEvent = $("#sports-event").val();
+    var date = $("#date").val();
+    var location = $("#location").val();
 
-  $(".events").append(sportsEvent + " ",  date + " ", location);
+    $(".events-list").append(`<div class="event-row"><div class="event-name">${sportsEvent}</div>  <div class="event-date">${date}</div> <div class="event-location">${location}</div> <button class="delete-button" type="submit">Delete</button></div>`);
 
-//$("#event-results").append($("<li>").text(sportsEvent));
-//$("#event-results").append($("<li>").text(date));
-//$("#event-results").append($("<li>").text(location));
+    $("#sports-event").val("");
+    $("#date").val("");
+    $("#location").val("");
 
-/*function myFunction() {
-    var table = document.getElementById("myTable");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    cell1.innerHTML = sportsEvent;
-    cell2.innerHTML = date;
-    cell3.innerHTML = location;
-}*/
+    $(".event-row").click(function() {
+      console.log("hello");
+      $(this).find("div").toggleClass("event-past");
 
+    });
 
-  $("#sports-event").val("");
-  $("#date").val("");
-  $("#location").val("");
+    $(".delete-button").click(function() {
+      console.log("delete-button-clicked");
+      $(this).closest(".event-row").remove();
+
+    });
 
   });
+
 
 
 });
